@@ -4,10 +4,20 @@
 // - lastName
 // - 'favorite food'
 // - bestFriend (object with the same 3 properties as above)
-
+const uncleVance = {
+  firstName: 'Vance',
+  lastName: 'Roley',
+  'favorite food': 'pizza',
+  bestFriend: {
+    firstName: 'Doja',
+    lastName: 'Cat',
+    'favorite food': 'fish'
+  }
+}
 
 // 2. console.log best friend's firstName and your favorite food
-
+console.log(uncleVance.bestFriend.firstName);
+console.log(uncleVance['favorite food']);
 
 // 3. Create an array to represent this tic-tac-toe board
 // -O-
