@@ -23,14 +23,17 @@ console.log(uncleVance['favorite food']);
 // -O-
 // -XO
 // X-X
-
+let row1 = ['-', 'O', '-'];
+let row2 = ['-', 'X', 'O'];
+let row3 = ['X', '-', 'X'];
+let ticTacToeBoard = [row1, row2, row3];
 
 // 4. After the array is created, 'O' claims the top right square.
 // Update that value.
-
+ticTacToeBoard[0][2] = 'O';
 
 // 5. Log the grid to the console.
-
+ticTacToeBoard.forEach((row) => console.log(`${row[0]} ${row[1]} ${row[2]}`));
 
 // 6. You are given an email as string myEmail, make sure it is in correct email format.
 // Should be 1 or more characters, then @ sign, then 1 or more characters, then dot, then one or more characters - no whitespace
