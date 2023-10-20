@@ -82,5 +82,7 @@ const months = [
   'December'
 ];
 
+const timeTag = `<time datetime="${dueDate.getFullYear()}-${dueDate.getMonth() + 1}-${dueDate.getDate()}">${months[dueDate.getMonth()]} ${dueDate.getDate()}, ${dueDate.getFullYear()}</time>`;
 
 // 10. log this value using console.log
+console.log(timeTag);
