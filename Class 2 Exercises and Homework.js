@@ -53,11 +53,16 @@ console.log(emailRE.test(' '));
 // i.e. '1/21/2019' - but this could be any date.
 // Convert this string to a Date
 const assignmentDate = '1/21/2019';
-
+const dateArray = assignmentDate.split('/');
+const aDate = new Date(dateArray[2], dateArray[0] - 1, dateArray[1]);
 
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
-
+const millisecondsInSevenDays = 1000 * 60 * 60 * 24 * 7;
+const assignmentDateMilliseconds = aDate.getTime();
+const dueDateMilliseconds = assignmentDateMilliseconds + millisecondsInSevenDays;
+const dueDate = new Date(dueDateMilliseconds);
+console.log(dueDate.toString());
 
 // 9. Use dueDate values to create an HTML time tag in format
 // <time datetime="YYYY-MM-DD">Month day, year</time>
