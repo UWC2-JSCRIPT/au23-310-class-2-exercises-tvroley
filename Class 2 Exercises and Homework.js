@@ -41,13 +41,14 @@ ticTacToeBoard.forEach((row) => console.log(`${row[0]} ${row[1]} ${row[2]}`));
 // Hints:
 // - Use rubular to check a few emails: https://rubular.com/
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
-const emailRE = /^[\w\S]+@[\w\S]+\.[\w\S]+$/;
+const emailRE = /^\w+@\w+\.\w+$/;
 console.log(emailRE.test('ricksteves@travel2europe.eu'));
 console.log(emailRE.test('123abc@456.'));
 console.log(emailRE.test('123abc@456. '));
 console.log(emailRE.test('123abc$%'));
 console.log(emailRE.test(''));
 console.log(emailRE.test(' '));
+console.log(emailRE.test('%@%.%'));
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
